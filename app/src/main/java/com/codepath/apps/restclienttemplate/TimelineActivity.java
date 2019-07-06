@@ -158,7 +158,7 @@ public class TimelineActivity extends AppCompatActivity {
     }
 
     private void populateTimeline() {
-        client.getHomeTimeline(0, new JsonHttpResponseHandler() {
+        client.getHomeTimeline(-1, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 Log.d("TwitterClient", response.toString());
